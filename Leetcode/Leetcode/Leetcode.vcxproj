@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{1E89D993-B7A0-4BED-AE27-63D6D441E021}</ProjectGuid>
-    <RootNamespace>KickStart</RootNamespace>
+    <ProjectGuid>{2FB89983-6E77-4B5B-9211-0F434830D2F4}</ProjectGuid>
+    <RootNamespace>Leetcode</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,13 +115,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="roundA.cpp" />
-    <ClCompile Include="roundB.cpp" />
-    <ClCompile Include="源.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="roundA.h" />
-    <ClInclude Include="roundB.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
