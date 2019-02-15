@@ -1,6 +1,6 @@
 #include"problem.h"
 
-string longestPalindrome(string s) {//naive
+string longestPalindrome0(string s) {//naive
 	int len = s.size();
 	int max = 0;
 	string str;
@@ -65,6 +65,7 @@ string longestPalindrome(string s) {//DP
 
 }
 
-string longestPalindrome(string s) {//中心扩散
-
+string longestPalindrome3(string s) {//中心扩散
+	return s;
 }
+
