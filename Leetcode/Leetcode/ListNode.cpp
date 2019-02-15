@@ -53,3 +53,43 @@ ListNode* mergeKLists(vector<ListNode*>& lists) {
 	}
 	return dami;
 }
+
+void swap(ListNode* l1, ListNode* l2) {
+	int t = l1->val;
+	l1->val = l2->val;
+	l2->val = t;
+}
+ListNode* swapPairs(ListNode* head) {
+	if (!head)return head;
+	ListNode* cur = head;
+	ListNode* next = cur->next;
+	while (cur && next) {
+		swap(cur, next);
+		cur = next->next;
+		if (cur)next = cur->next;
+	}
+	return head;
+}
+
+ListNode* reverseKGroup(ListNode* head, int k) {
+	if (!head)return head;
+	stack<int> S;
+	ListNode* p = head;
+	while (p) {
+		ListNode* tmp = p;
+		for (int i = 0; i < k; i++) {
+			if (!tmp) return head;
+			S.push(tmp->val);
+			tmp = tmp->next;			
+		}
+		tmp = p;
+		for (int i = 0; i < k; i++) {
+			tmp->val = S.top();
+			S.pop();
+			tmp = tmp->next;
+		}
+		p = tmp;
+	}
+	return head;
+}
+
