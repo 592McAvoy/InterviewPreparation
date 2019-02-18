@@ -21,7 +21,22 @@
     <ClCompile Include="longestPalindrome.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="3sum.cpp">
+    <ClCompile Include="helper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ListNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodImplement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="other.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="parentheses.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ksum.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -6,11 +6,8 @@
 using namespace std;
 
 int main() {
-	vector<int> vec = {1,1,1 };
-	sort(vec, 0, vec.size() - 1);
-	for (int n : vec) {
-		cout << n << " ";
-	}
-	cout << endl;
+	vector<int> vec = {1,3,4,56,70};
+	int idx = binarySearch(vec, 0, 4, 70);
+	cout << idx<<endl;
 	cin.get();
 }

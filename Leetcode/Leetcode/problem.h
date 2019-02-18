@@ -11,7 +11,9 @@ using namespace std;
 
 /***********************       helper       ******************************/
 #define MAX(a,b)((a)>(b)?(a):(b))
+void swap(vector<int>& nums, int a, int b);
 void sort(vector<int>& nums, int low, int high);
+int binarySearch(vector<int>& nums, int low, int high, int target);
 
 /***********************       Palindrome       ******************************/
 string longestPalindrome(string s);
@@ -37,3 +39,10 @@ ListNode* reverseKGroup(ListNode* head, int k);
 /***********************       Method implement      ******************************/
 int strStr(string haystack, string needle);
 int divide(int dividend, int divisor);
+
+/***********************       Parentheses      ******************************/
+int longestValidParentheses(string s);
+
+/***********************       other      ******************************/
+void nextPermutation(vector<int>& nums);
+
