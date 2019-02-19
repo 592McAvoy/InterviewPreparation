@@ -6,6 +6,7 @@
 #include<queue>
 #include<map>
 #include<stack>
+#include<algorithm>
 
 using namespace std;
 
@@ -23,6 +24,7 @@ vector<int> twoSum(vector<int>& nums, int target);
 vector<vector<int>> threeSum(vector<int>& nums);
 int threeSumClosest(vector<int>& nums, int target);
 vector<vector<int>> fourSum(vector<int>& nums, int target);
+vector<vector<int>> combinationSum(vector<int>& candidates, int target);
 
 /***********************       ListNode       ******************************/
 struct ListNode {
@@ -42,6 +44,13 @@ int divide(int dividend, int divisor);
 
 /***********************       Parentheses      ******************************/
 int longestValidParentheses(string s);
+
+/***********************       Sudoku      ******************************/
+bool isValidSudoku(vector<vector<char> > &board);
+void solveSudoku(vector<vector<char>>& board);
+
+/***********************       Regular Expression Matching      ******************************/
+bool isMatch(string s, string p);
 
 /***********************       other      ******************************/
 void nextPermutation(vector<int>& nums);

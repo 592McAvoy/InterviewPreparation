@@ -144,3 +144,63 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
 	}
 	return ret;
 }
+
+void findCombination(vector<int>& candidates, int target, vector<int>& combination, vector<vector<int>>& ret, int idx) {
+	if (target < candidates[idx])return;
+	int size = candidates.size();
+	for (int i = idx; i < size; i++) {
+		int num = candidates[i];
+		if (target == num) {
+			combination.push_back(num);
+			ret.push_back(combination);
+		}
+		else if (target > num) {
+			vector<int> tmp = combination;
+			tmp.push_back(num);
+			findCombination(candidates, target - num, tmp, ret, i);
+		}
+		else
+			break;
+	}
+}
+
+vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+	int size = candidates.size();
+	vector<vector<int>> init;
+	vector<int> combination;
+	if (size == 0)return init;
+	sort(candidates, 0, size - 1);
+	findCombination(candidates, target, combination, init, 0);
+
+	return init;
+}
+
+void findCombination2(vector<int>& candidates, int target, vector<int>& combination, vector<vector<int>>& ret, int idx) {
+	int size = candidates.size();
+	if (idx < size && target < candidates[idx])return;	
+	for (int i = idx; i < size; i++) {
+		int num = candidates[i];
+		if (i > idx && num == candidates[i - 1])continue;
+		if (target == num) {
+			combination.push_back(num);
+			ret.push_back(combination);
+		}
+		else if (target > num) {
+			vector<int> tmp = combination;
+			tmp.push_back(num);
+			findCombination2(candidates, target - num, tmp, ret, i + 1);
+		}
+		else
+			break;
+	}
+}
+vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+	int size = candidates.size();
+	vector<vector<int>> init;
+	vector<int> combination;
+	if (size == 0)return init;
+	sort(candidates, 0, size - 1);
+	findCombination2(candidates, target, combination, init, 0);
+
+	return init;
+}
